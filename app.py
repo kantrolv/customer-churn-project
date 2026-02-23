@@ -103,6 +103,11 @@ if uploaded_file is not None:
 
     st.dataframe(original_df[display_columns], use_container_width=True)
 
+    # --- Risk Distribution ---
+    st.markdown("---")
+    st.subheader("📊 Risk Distribution")
+    st.bar_chart(original_df["Risk_Level"].value_counts())
+
     # --- Key Drivers Section ---
     st.markdown("---")
     st.subheader("📈 Top Features Contributing to Churn")
